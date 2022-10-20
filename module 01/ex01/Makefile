@@ -1,7 +1,7 @@
 NAME = moar_brainz
 
 HEADER = Zombie.hpp
-SRC = main.cpp Zombie.hpp Zombie.cpp zombieHorde.cpp
+SRC = main.cpp Zombie.cpp zombieHorde.cpp
 OBJ = $(SRC:.cpp=.o)
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
