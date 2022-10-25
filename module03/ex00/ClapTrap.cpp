@@ -5,7 +5,7 @@ ClapTrap::ClapTrap()
 	std::cout << "ClapTrap is born" << std::endl;
 	this->energy = 10;
 	this->health = 10;
-	this->damage = 1;
+	this->damage = 0;
 }
 
 ClapTrap::ClapTrap(std::string name)
@@ -14,7 +14,7 @@ ClapTrap::ClapTrap(std::string name)
 	this->name = name;
 	this->energy = 10;
 	this->health = 10;
-	this->damage = 1;
+	this->damage = 0;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &inst)
