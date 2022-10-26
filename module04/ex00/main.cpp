@@ -1,0 +1,65 @@
+#include "Cat.hpp"
+#include "Dog.hpp"
+#include "WrongCat.hpp"
+#include "WrongAnimal.hpp"
+
+int	main(void)
+{
+	std::cout << COLOR_YELLOW_B;
+	std::cout << "Animal testing" << std::endl;
+	std::cout << COLOR_END;
+
+	const Animal	*meta = new Animal();
+	const Animal	*j = new Dog();
+	const Animal	*i = new Cat();
+
+	std::cout << std::endl;
+	std::cout << COLOR_BLUE_B;
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	std::cout << COLOR_END;
+
+	std::cout << std::endl;
+	i->makeSound();
+	j->makeSound();
+	meta->makeSound();
+
+	std::cout << std::endl;
+	delete j;
+	delete i;
+	delete meta;
+
+	std::cout << std::endl;
+	std::cout << COLOR_YELLOW_B;
+	std::cout << "WrongAnimal testing" << std::endl;
+	std::cout << COLOR_END;
+
+	const WrongAnimal	*MyWrongAnimal = new WrongAnimal();
+	const WrongAnimal	*MyWrongCat = new WrongCat();
+
+	std::cout << std::endl;
+	std::cout << COLOR_BLUE_B;
+	std::cout << MyWrongCat->getType() << " " << std::endl;
+	std::cout << COLOR_END;
+
+	std::cout << std::endl;
+	MyWrongCat->makeSound();
+	MyWrongAnimal->makeSound();
+
+	std::cout << std::endl;
+	delete MyWrongCat;
+	delete MyWrongAnimal;
+
+	std::cout << std::endl;
+	const WrongCat		*RealWrongCat = new WrongCat();
+	std::cout << std::endl;
+	std::cout << COLOR_BLUE_B;
+	std::cout << RealWrongCat->getType() << " " << std::endl;
+	std::cout << COLOR_END;
+	std::cout << std::endl;
+	RealWrongCat->makeSound();
+	std::cout << std::endl;
+	delete RealWrongCat;
+
+	return (0);
+}
